@@ -33,7 +33,7 @@ public class ProfileActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_profile);
                 fab= (FloatingActionButton) findViewById(R.id.fab);
 
-                //fab.setBackgroundColor(Color.red());
+
 
                 Display display = getWindowManager().getDefaultDisplay();
                 Point size = new Point();
@@ -49,18 +49,7 @@ public class ProfileActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         fc.toggle(false);
 
-                        if(toggle%2==0) {
-                            fab.setVisibility(View.VISIBLE);
-                            toggle++;
-                        }
-                        else {
-                            fab.setVisibility(View.GONE);
-                            toggle++;
-                        }
-
-
-
-                    }
+                         }
                 });
 
                 // get our folding cell

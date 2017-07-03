@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.Point;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.NestedScrollView;
@@ -20,13 +21,19 @@ import com.ramotion.foldingcell.FoldingCell;
 public class ProfileActivity extends AppCompatActivity {
 
 
+
             int height, width;
             //private BottomBar bottomBar;
+            Integer toggle = 0;
+            FloatingActionButton fab;
 
             @Override
             protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_profile);
+                fab= (FloatingActionButton) findViewById(R.id.fab);
+
+                //fab.setBackgroundColor(Color.red());
 
                 Display display = getWindowManager().getDefaultDisplay();
                 Point size = new Point();
@@ -41,6 +48,18 @@ public class ProfileActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         fc.toggle(false);
+
+                        if(toggle%2==0) {
+                            fab.setVisibility(View.VISIBLE);
+                            toggle++;
+                        }
+                        else {
+                            fab.setVisibility(View.GONE);
+                            toggle++;
+                        }
+
+
+
                     }
                 });
 

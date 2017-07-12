@@ -4,10 +4,55 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/white">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="9"
+            android:id="@+id/layout1"
+            android:layout_margin="10dp"
+            android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:weightSum="3"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:text="Search"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_margin="3dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_add_alert_black_24dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_add_alert_black_24dp"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/layout2">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -24,25 +69,28 @@
             android:layout_height="wrap_content"
             android:id="@+id/image3"
             android:src="@drawable/ic_add_alert_black_24dp"/>
+    </LinearLayout>
 
-   </LinearLayout>
+
+    </RelativeLayout>
 
 
-    <android.support.v4.widget.NestedScrollView
+
+<android.support.v4.widget.NestedScrollView
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+android:id="@+id/scrollmain">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:id="@+id/scrollmain">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
 
 
         <LinearLayout
@@ -120,32 +168,13 @@
                 android:text="Option"/>
 
         </LinearLayout>
-        </LinearLayout>
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="800dp"
-            android:orientation="horizontal"
-            android:weightSum="4">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_grid_on_black_24dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Option"/>
-
-        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -203,17 +232,36 @@
                 android:text="Option"/>
 
         </LinearLayout>
-        </LinearLayout>
-
 
         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_grid_on_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
 
     </LinearLayout>
-        </LinearLayout>
+</LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
 

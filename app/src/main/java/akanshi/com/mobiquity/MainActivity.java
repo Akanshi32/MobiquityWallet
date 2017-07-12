@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Integer toggle = 0;
 
     ImageView imageView1, imageView2, imageView3;
+    LinearLayout layout1, layout2;
 
 
 
@@ -37,7 +39,12 @@ public class MainActivity extends AppCompatActivity {
             imageView2 = (ImageView)findViewById(R.id.image2);
             imageView3 = (ImageView)findViewById(R.id.image3);
 
-            imageView3.setVisibility(View.INVISIBLE);
+            layout1 = (LinearLayout) findViewById(R.id.layout1);
+            layout2 = (LinearLayout) findViewById(R.id.layout2);
+
+
+
+            layout2.setVisibility(View.INVISIBLE);
 
 
 
@@ -50,14 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
 
                         if (scrollY > oldScrollY) {
-                            imageView1.setVisibility(View.INVISIBLE);
-                            imageView2.setVisibility(View.INVISIBLE);
-                            imageView3.setVisibility(View.VISIBLE);
+                            layout1.setVisibility(View.INVISIBLE);
+                            layout2.setVisibility(View.VISIBLE);
                         }
                         if (scrollY  == 0) {
-                            imageView1.setVisibility(View.VISIBLE);
-                            imageView2.setVisibility(View.VISIBLE);
-                            imageView3.setVisibility(View.INVISIBLE);
+                            layout1.setVisibility(View.VISIBLE);
+                            layout2.setVisibility(View.INVISIBLE);
+
                         }
 
 
